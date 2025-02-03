@@ -58,12 +58,9 @@ public class Graph {
                 }
             }
         }
-        return Collections.emptyList(); // No path found
+        return Collections.emptyList();
     }
 
-    /**
-     * Reconstructs the path from start to end using the parent map.
-     */
     private static List<Integer> reconstructPath(Map<Integer, Integer> parent, int start, int end) {
         List<Integer> path = new ArrayList<>();
         for (int at = end; at != -1; at = parent.get(at)) {
