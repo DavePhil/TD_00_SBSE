@@ -30,7 +30,7 @@ public class BreadthFirstSearch {
 
 
     void test() {
-        System.out.println("First BFS Test: ");
+        System.out.println("BFS Test: ");
         Graph.addEdge(0, 1);
         Graph.addEdge(0, 2);
         Graph.addEdge(1, 3);
@@ -40,6 +40,6 @@ public class BreadthFirstSearch {
 
         Graph.removeAllEdges();
 
-        System.out.println("Second BFS Test: ");
+        System.out.println(" ");
     }
 }

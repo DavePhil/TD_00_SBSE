@@ -9,5 +9,7 @@ public class main {
 
         DepthFirstSearch dfs = new DepthFirstSearch(graph);
         dfs.test();
+
+        graph.test();
     }
 }

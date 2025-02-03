@@ -27,7 +27,7 @@ public class DepthFirstSearch {
     }
 
     void test() {
-        System.out.println("First DFS Test: ");
+        System.out.println("DFS Test: ");
         Graph.addEdge(1, 2);
         Graph.addEdge(1, 0);
         Graph.addEdge(2, 0);
@@ -36,5 +36,7 @@ public class DepthFirstSearch {
         dfs(1);
 
         Graph.removeAllEdges();
+
+        System.out.println(" ");
     }
 }
