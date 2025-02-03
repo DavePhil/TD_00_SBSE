@@ -22,4 +22,25 @@ public class BinarySearch {
         }
         return -1;
     }
+
+    public static void test(){
+        BinarySearch search = new BinarySearch();
+
+        int[] array = { 4, 9, 11, 23, 20, 27, 60};
+        int n = array.length;
+        int x = 23;
+        int result = search.binarySearch(array, x);
+        // int result = search.recursiveBinarySearch(array, x, 0, n - 1);
+        System.out.println("Search value :" + x);
+        System.out.print("Input : ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(array[i] + " ");
+        }
+        System.out.println("");
+        System.out.print("Output :");
+        if (result == -1) {
+            System.out.println("Element not found");
+        }
+        else System.out.println("The element found at index " +  result);
+    }
 }

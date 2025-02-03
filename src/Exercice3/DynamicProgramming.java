@@ -32,7 +32,7 @@ public class DynamicProgramming {
         return dp[n][W];
     }
 
-    void test(){
+    public static void test(){
         Items[] items = {
                 new Items(2, 3),
                 new Items(3, 4),
@@ -40,6 +40,14 @@ public class DynamicProgramming {
                 new Items(5, 6)
         };
         int W = 5;
+        System.out.println("Inputs");
+        System.out.print("Weigth: " + W + ", ");
+        System.out.print("Items: ");
+        for (Items item : items) {
+            System.out.print("(Value : " + item.getValue() + ", Weight : " + item.getWeight() + ")");
+        }
+        System.out.println();
+        System.out.println("Outputs");
         List<Items> chosenItems = new ArrayList<>();
         System.out.println("Maximum value in Knapsack: " + knapsack(W, items, chosenItems));
 

@@ -70,7 +70,8 @@ public class Graph {
         return path;
     }
 
-    public void test() {
+    public static void test() {
+        Graph graph = new Graph(15);
 
         System.out.println("Shortest Path Test ");
 

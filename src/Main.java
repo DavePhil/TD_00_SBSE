@@ -1,3 +1,7 @@
+import Exercice2.Graph;
+import Exercice3.DynamicProgramming;
+import exercice1.BinarySearch;
+
 import java.util.Scanner;
 
 public class Main {
@@ -8,6 +12,9 @@ public class Main {
     }
 
     public static void menu () {
+       BinarySearch binarySearch = new BinarySearch();
+
+
         int selectedOption;
         int end;
         do {
@@ -25,17 +32,17 @@ public class Main {
             switch (selectedOption){
                 case 1:
                     System.out.println("======================= Binary Search ========================");
-
+                    BinarySearch.test();
                     System.out.println("==============================================================");
                     break;
                 case 2:
                     System.out.println("=============== Graph Traversal (BFS and DFS) ================");
-
+                    Graph.test();
                     System.out.println("==============================================================");
                     break;
                 case 3:
                     System.out.println("============ Dynamic Programming (Knapsack Problem) ===========");
-
+                    DynamicProgramming.test();
                     System.out.println("===============================================================");
                     break;
                 case 4:
