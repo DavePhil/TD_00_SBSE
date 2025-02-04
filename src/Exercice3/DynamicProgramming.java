@@ -1,6 +1,7 @@
 package Exercice3;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class DynamicProgramming {
@@ -33,27 +34,41 @@ public class DynamicProgramming {
     }
 
     public static void test(){
-        Items[] items = {
-                new Items(2, 3),
-                new Items(3, 4),
-                new Items(4, 5),
-                new Items(5, 6)
-        };
-        int W = 5;
-        System.out.println("Inputs");
-        System.out.print("Weigth: " + W + ", ");
-        System.out.print("Items: ");
-        for (Items item : items) {
-            System.out.print("(Value : " + item.getValue() + ", Weight : " + item.getWeight() + ")");
-        }
-        System.out.println();
-        System.out.println("Outputs");
-        List<Items> chosenItems = new ArrayList<>();
-        System.out.println("Maximum value in Knapsack: " + knapsack(W, items, chosenItems));
+        List<Items[]> testCases = Arrays.asList(
+                new Items[]{new Items(2, 3), new Items(3, 4), new Items(4, 5), new Items(5, 6)},
+                new Items[]{new Items(60, 10), new Items(100, 20), new Items(120, 30)},
+                new Items[]{new Items(10, 5), new Items(20, 10), new Items(30, 15)},
+                new Items[]{new Items(1, 2), new Items(2, 3), new Items(3, 4), new Items(4, 5)},
+                new Items[]{new Items(50, 1), new Items(100, 2), new Items(150, 3)},
+                new Items[]{},
+                new Items[]{new Items(5, 10), new Items(4, 9), new Items(3, 8)},
+                new Items[]{new Items(10, 5)}
+        );
 
-        System.out.println("Items selected in the Knapsack:");
-        for (Items item : chosenItems) {
-            System.out.println("Weight: " + item.getWeight() + ", Value: " + item.getValue());
+        int[] weights = {5, 50, 20, 10, 5, 5, 7, 5};
+
+        for (int i = 0; i < testCases.size(); i++) {
+            Items[] items = testCases.get(i);
+            int W = weights[i];
+
+            System.out.println("Test " + (i + 1) + ":");
+            System.out.println("Inputs");
+            System.out.print("Weigth: " + W + ", ");
+            System.out.print("Items: ");
+            for (Items item : items) {
+                System.out.print("(Value: " + item.getValue() + ", Weight: " + item.getWeight() + ") ");
+            }
+            System.out.println();
+
+            System.out.println("Outputs");
+            List<Items> chosenItems = new ArrayList<>();
+            System.out.println("Maximum value in Knapsack: " + knapsack(W, items, chosenItems));
+
+            System.out.println("Items selected in the Knapsack:");
+            for (Items item : chosenItems) {
+                System.out.println("Weight: " + item.getWeight() + ", Value: " + item.getValue());
+            }
+            System.out.println("------------------------");
         }
     }
 }

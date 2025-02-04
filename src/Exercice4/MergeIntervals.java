@@ -53,17 +53,25 @@ public class MergeIntervals {
     }
 
 
-    static void test(){
-        List<int[]> arr = new ArrayList<>(Arrays.asList(
-                new int[]{7, 8},
-                new int[]{1, 5},
-                new int[]{2, 4},
-                new int[]{4, 6}
-        ));
+    public static void test(){
+        List<int[][]> testCases = Arrays.asList(
+                new int[][]{{1, 3}, {2, 6}, {8, 10}, {15, 18}},
+                new int[][]{{1, 4}, {4, 5}},
+                new int[][]{{1, 2}, {3, 4}, {5, 6}},
+                new int[][]{{1, 10}, {2, 6}, {3, 5}, {7, 9}},
+                new int[][]{{5, 10}, {1, 3}, {2, 6}},
+                new int[][]{{1, 5}}
+        );
 
-        List<int[]> res = mergedMethod (arr);
+        for (int i = 0; i < testCases.size(); i++) {
+            List<int[]> intervals = new ArrayList<>(Arrays.asList(testCases.get(i)));
 
-        for (int[] interval : res)
-            System.out.println(interval[0] + " " + interval[1]);
+            List<int[]> res = mergedMethod(intervals);
+
+            System.out.print("Test " + (i + 1) + ": Input " + Arrays.deepToString(testCases.get(i)) + " → Output ");
+            for (int[] interval : res)
+                System.out.print("[" + interval[0] + ", " + interval[1] + "] ");
+            System.out.println();
+        }
     }
 }

@@ -1,5 +1,7 @@
 import Exercice2.Graph;
 import Exercice3.DynamicProgramming;
+import Exercice4.MergeIntervals;
+import Exercice5.MaxSubArraySum;
 import exercice1.BinarySearch;
 
 import java.util.Scanner;
@@ -46,13 +48,13 @@ public class Main {
                     System.out.println("===============================================================");
                     break;
                 case 4:
-                    System.out.println("======================== Average Score ========================");
-
+                    System.out.println("======================= Merge Intervals =======================");
+                    MergeIntervals.test();
                     System.out.println("===============================================================");
                     break;
                 case 5:
                     System.out.println("========== Maximum Subarray Sum (Kadane’s Algorithm) ==========");
-
+                    MaxSubArraySum.test();
                     System.out.println("===============================================================");
                     break;
                 case 6:
