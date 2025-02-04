@@ -29,9 +29,7 @@ Avant de pouvoir exécuter l'application, assurez-vous d'avoir installé les out
    ```bash
    java Main
    
-## Utilisation 
-Lorsque vous exécutez l'application, un menu interactif vous sera présenté avec plusieurs options. Vous pouvez choisir l'algorithme que vous souhaitez tester en entrant le numéro correspondant. Voici un aperçu du menu :
-
+## Utilisation
 Lorsque vous exécutez l'application, un menu interactif vous sera présenté avec plusieurs options. Vous pouvez choisir l'algorithme que vous souhaitez tester en entrant le numéro correspondant. Voici un aperçu du menu :
 
 *******************************************************************************
